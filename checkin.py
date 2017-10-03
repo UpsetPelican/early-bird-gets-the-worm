@@ -7,7 +7,7 @@ import requests
 testURL="https://www.posttestserver.com/post.php"
 
 now = datetime.datetime.now()
-idGen = int(round(time.time() * 1000));
+idGen = "{}{}".format(now.month + int(now.strftime("%y")), now.day if now.day > 10 else '0' + str(now.day));
 randmin = randint(10, 30)
 payload = {}
 
